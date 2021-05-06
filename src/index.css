@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div#main-container {
+  display: inline-flex;
+  background-color: #ED4AAE;
+  width: 100%;
+  justify-items: right;
+}
+
+section#left-sidebar{
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}  
+
+@media only screen and ( max-width: 768px ) {
+  section#left-sidebar {
+    visibility: hidden;
+  }
+}
+
+img#elixa-sidebar-icon{
+  width: 100%;
+  background-color: #41BC3F;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-bottom-width: 8px;
+}

@@ -1,0 +1,14 @@
+.initial-choices-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.initial-choices-button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #ED4AAE;
+  margin: 3px;
+  font-size: medium;
+}

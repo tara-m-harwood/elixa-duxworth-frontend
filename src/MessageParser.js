@@ -6,7 +6,7 @@ class MessageParser {
   }
 
   parse(message) {
-    console.log(message)
+    this.actionProvider.elixa(message)
   }
 }
 
