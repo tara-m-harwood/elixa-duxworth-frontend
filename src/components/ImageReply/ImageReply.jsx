@@ -1,14 +1,29 @@
-import React from "react";
+import React, { Component } from 'react'
 
 import "./ImageReply.css";
 
-const ImageReply = (props) => {
+export default class ImageReply extends Component {
 
-  const imageSource = props.imageSource
+  constructor(props) {
+    super(props);
+    this.state = {imageSource: ""};
+  }
 
-  return  <div className="image-reply-container">
-            <img src={imageSource}></img>
+  componentDidMount(){
+    if(this.state.imageSource===''){
+      this.setState({imageSource: this.props.imageSource})     
+    }
+  }
+
+  render() {
+
+    return (
+      <div>
+          return
+          <div className="image-reply-container">
+            <img src={this.state.imageSource}></img>
           </div>;
-};
-
-export default ImageReply;
+      </div>
+    )
+  }
+}

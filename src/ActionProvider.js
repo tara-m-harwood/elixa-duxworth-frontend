@@ -34,7 +34,7 @@ class ActionProvider {
                         imageSource: imageSource
                         }));
 
-                        const pbImageReply = this.createChatBotMessage("pic", {widget: "imageReply"})
+                        const pbImageReply = this.createChatBotMessage("here you go", {widget: "imageReply"})
                         this.updateChatbotState(pbImageReply);
 
                     } else {

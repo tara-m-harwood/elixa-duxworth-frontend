@@ -1,16 +1,7 @@
-.image-reply-container {
-  width: 50%;
+div.image-reply-container {
+  max-width: 50%;
 }
 
-img{
+div.image-reply-container img{
   width: 100%;
-}
-
-.initial-choices-button {
-  padding: 0.5rem;
-  border-radius: 25px;
-  background: #fff;
-  border: 1px solid #ED4AAE;
-  margin: 3px;
-  font-size: medium;
 }
