@@ -12,6 +12,12 @@ class ActionProvider {
         this.pbGetReply(clientMessage.message)
     }
 
+    handleEndTroubleshooter = () => {
+        const clientMessage = this.createClientMessage("Yes, that helped!")
+        this.updateChatbotState(clientMessage)
+        this.pbGetReply(clientMessage.message)
+    }
+
     handleStartChatting = () => {
         const clientMessage = this.createClientMessage("I just want to chat")
         this.updateChatbotState(clientMessage)
@@ -43,7 +49,7 @@ class ActionProvider {
                             imageSource: imageSource
                         }));
 
-                        const pbImageReply = this.createChatBotMessage("...", {widget: "imageReply"})
+                        const pbImageReply = this.createChatBotMessage("LOL!", {widget: "imageReply"})
                         this.updateChatbotState(pbImageReply);
 
                     } else {
