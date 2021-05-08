@@ -6,6 +6,16 @@ import ActionProvider from "./ActionProvider";
 import MessageParser from "./MessageParser";
 import config from "./config";
 
+  const saveMessages = (messages) => {
+    localStorage.setItem("chat_messages", JSON.stringify(messages));
+    console.log("local storage",localStorage)
+  };
+
+  const loadMessages = () => {
+    const messages = JSON.parse(localStorage.getItem("chat_messages"));
+    return messages;
+  };
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +24,8 @@ function App() {
           config={config}
           actionProvider={ActionProvider}
           messageParser={MessageParser}
+          saveMessages={saveMessages}
+          loadMessages={loadMessages}
         />
       </header>
     </div>

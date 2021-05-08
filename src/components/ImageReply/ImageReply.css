@@ -1,0 +1,7 @@
+div.image-reply-container {
+  max-width: 40%;
+}
+
+div.image-reply-container img{
+  width: 100%;
+}
