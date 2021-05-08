@@ -29,7 +29,7 @@ class ActionProvider {
             .then(data => data.json())
             .then(data => {
                 const responses = data.responses
-
+                console.log(responses)
                 responses.forEach(response => {
                     
                     if(response.substr(0,7)==="<image>") {
