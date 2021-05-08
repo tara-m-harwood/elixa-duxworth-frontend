@@ -6,6 +6,18 @@ class ActionProvider {
         this.createClientMessage = createClientMessage;
     }
 
+    handleStartTroubleshooter = () => {
+        const clientMessage = this.createClientMessage("I need help with my code")
+        this.updateChatbotState(clientMessage)
+        this.pbGetReply(clientMessage.message)
+    }
+
+    handleStartChatting = () => {
+        const clientMessage = this.createClientMessage("I just want to chat")
+        this.updateChatbotState(clientMessage)
+        this.pbGetReply(clientMessage.message)
+    }
+
     // pbGetReply takes in a message from the MessageParser and retrieves a reply from Pandorabots API
 
     pbGetReply(message) {
@@ -16,25 +28,22 @@ class ActionProvider {
         fetch(`${baseURL}${message}`, options)
             .then(data => data.json())
             .then(data => {
-                // console.log(data) 
                 const responses = data.responses
 
                 responses.forEach(response => {
                     
                     if(response.substr(0,7)==="<image>") {
 
-
                         const parser = new DOMParser()
                         const xmlImageDoc = parser.parseFromString(response, "application/xml")
                         const imageSource = xmlImageDoc.documentElement.textContent
-                        console.log(imageSource)
 
                         this.setState((prevState) => ({
                             ...prevState,
-                        imageSource: imageSource
+                            imageSource: imageSource
                         }));
 
-                        const pbImageReply = this.createChatBotMessage("here you go", {widget: "imageReply"})
+                        const pbImageReply = this.createChatBotMessage("...", {widget: "imageReply"})
                         this.updateChatbotState(pbImageReply);
 
                     } else {
