@@ -6,6 +6,11 @@ class ActionProvider {
         this.createClientMessage = createClientMessage;
     }
 
+    state = {
+        session: "test"
+    }
+
+
     handleStartTroubleshooter = () => {
         const clientMessage = this.createClientMessage("I need help with my code")
         this.updateChatbotState(clientMessage)
@@ -29,13 +34,16 @@ class ActionProvider {
     pbGetReply(message) {
 
         const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa?user_key=bc3d30376b455afd667908e211239116&input="
-        const options = { method: 'POST'}
+        const options = { method: 'POST' }
 
         fetch(`${baseURL}${message}`, options)
             .then(data => data.json())
             .then(data => {
                 const responses = data.responses
-                console.log(responses)
+                console.log(data.sessionid)
+
+                const pbSession = data.sessionid
+
                 responses.forEach(response => {
                     
                     if(response.substr(0,7)==="<image>") {

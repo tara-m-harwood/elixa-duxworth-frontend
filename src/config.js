@@ -17,6 +17,7 @@ const config = {
     ],
 
     state: {
+        sessionID: "",
         imageSource: "https://elixa.io/assets/elixa.png",
     },
 
