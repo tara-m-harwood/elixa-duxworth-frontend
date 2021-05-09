@@ -2,12 +2,14 @@
 
 import { helpTest } from "./pbHelper"
 
+var pbSession = ""
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
         this.createClientMessage = createClientMessage;
+        this.state = { testcon: "con test"}
     }
 
     handleStartTroubleshooter = () => {
@@ -32,11 +34,11 @@ class ActionProvider {
 
     pbGetReply(message) {
 
-        console.log("pb test", helpTest())
+        console.log("before", pbSession)
 
         const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa"
         const user_key = "bc3d30376b455afd667908e211239116"
-        const session = 6796820
+        const session = pbSession
         const options = { method: "POST"}
 
         const pbURL = `${baseURL}?user_key=${user_key}&input=${message}&sessionid=${session}`
@@ -46,7 +48,13 @@ class ActionProvider {
             .then(data => {
                 const responses = data.responses
 
-                console.log("pb", data.sessionid)
+                console.log("during", data.sessionid)
+
+                if(pbSession===""){
+                    pbSession = data.sessionid
+                }
+
+                console.log("after", pbSession)
 
                 responses.forEach(response => {
                     
