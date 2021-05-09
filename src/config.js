@@ -17,7 +17,7 @@ const config = {
     ],
 
     state: {
-        sessionID: "",
+        pbSession: "",
         imageSource: "https://elixa.io/assets/elixa.png",
     },
 

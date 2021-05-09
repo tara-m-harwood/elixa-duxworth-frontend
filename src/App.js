@@ -8,7 +8,6 @@ import config from "./config";
 
   const saveMessages = (messages) => {
     localStorage.setItem("chat_messages", JSON.stringify(messages));
-    console.log("local storage",localStorage)
   };
 
   const loadMessages = () => {

@@ -1,15 +1,14 @@
 // ActionProvider starter code
+
+import { helpTest } from "./pbHelper"
+
+
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
         this.createClientMessage = createClientMessage;
     }
-
-    state = {
-        session: "test"
-    }
-
 
     handleStartTroubleshooter = () => {
         const clientMessage = this.createClientMessage("I need help with my code")
@@ -33,16 +32,21 @@ class ActionProvider {
 
     pbGetReply(message) {
 
-        const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa?user_key=bc3d30376b455afd667908e211239116&input="
-        const options = { method: 'POST' }
+        console.log("pb test", helpTest())
 
-        fetch(`${baseURL}${message}`, options)
+        const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa"
+        const user_key = "bc3d30376b455afd667908e211239116"
+        const session = 6796820
+        const options = { method: "POST"}
+
+        const pbURL = `${baseURL}?user_key=${user_key}&input=${message}&sessionid=${session}`
+
+        fetch(pbURL, options)
             .then(data => data.json())
             .then(data => {
                 const responses = data.responses
-                console.log(data.sessionid)
 
-                const pbSession = data.sessionid
+                console.log("pb", data.sessionid)
 
                 responses.forEach(response => {
                     
