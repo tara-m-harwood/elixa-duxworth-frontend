@@ -1,15 +1,13 @@
 // ActionProvider starter code
 
-import { helpTest } from "./pbHelper"
-
-var pbSession = ""
+import pbBuildURL from "./pandorabotsProvider"
+import { pbSetSession } from "./pandorabotsProvider"
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
         this.createClientMessage = createClientMessage;
-        this.state = { testcon: "con test"}
     }
 
     handleStartTroubleshooter = () => {
@@ -30,32 +28,18 @@ class ActionProvider {
         this.pbGetReply(clientMessage.message)
     }
 
-    // pbGetReply takes in a message from the MessageParser and retrieves a reply from Pandorabots API
-
     pbGetReply(message) {
-
-        console.log("before", pbSession)
-
-        const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa"
-        const user_key = "bc3d30376b455afd667908e211239116"
-        const session = pbSession
         const options = { method: "POST"}
 
-        const pbURL = `${baseURL}?user_key=${user_key}&input=${message}&sessionid=${session}`
-
-        fetch(pbURL, options)
+        fetch(pbBuildURL(message),options)
             .then(data => data.json())
             .then(data => {
+
+                console.log(data)
+
+                pbSetSession(data.sessionid)
+
                 const responses = data.responses
-
-                console.log("during", data.sessionid)
-
-                if(pbSession===""){
-                    pbSession = data.sessionid
-                }
-
-                console.log("after", pbSession)
-
                 responses.forEach(response => {
                     
                     if(response.substr(0,7)==="<image>") {

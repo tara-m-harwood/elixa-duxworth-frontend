@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
 
 import "./InitialChoices.css";
 
 const InitialChoices = (props) => {
+
   const options = [
     {
       text: "I need help with my code",
