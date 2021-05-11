@@ -1,10 +1,10 @@
 const user_key = process.env.REACT_APP_PB_USER_KEY; 
-const app_id = process.env.REACT_APP_PB_APP_ID
-const botname = process.env.REACT_APP_PB_BOTNAME
-const api_root = "https://api.pandorabots.com"
+const app_id = process.env.REACT_APP_PB_APP_ID;
+const botname = process.env.REACT_APP_PB_BOTNAME;
+const api_root = "https://api.pandorabots.com";
 const extra = true;
-var currentSession = ""
-var currentClient = ""
+var currentSession = "";
+var currentClient = "";
 
 export default function pbBuildURL(message){
 
@@ -54,4 +54,8 @@ export function pbSaveClient(client){
     fetch(baseURL, fetchOptions)
         .then(response => response.json())
         .then(console.log)
-}                        
+}
+
+export function testIt(username, phone){
+        console.log(username, phone)
+    }

@@ -23,3 +23,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// const saveForm = document.getElementById("modal-content-form-save")
+// saveForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     console.log("made it to save form")
+//     const saveFormData = new FormData(e.target);
+//     const saveUserName = saveFormData.get("save-username")
+//     const savePhone = saveFormData.get("save-phone")
+//     testIt(saveUserName, savePhone)
+//     add function here
+// })
