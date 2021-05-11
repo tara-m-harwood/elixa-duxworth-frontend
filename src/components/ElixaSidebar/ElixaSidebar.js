@@ -70,6 +70,7 @@ export default class ElixaSidebar extends Component {
 
                 <div id="#modal-content-container" className={this.getModalClass()}>
                     <form id="save-modal-form">
+                        <button className="closeModalTimes" onClick={e => this.modalClose(e)}>&times;</button>
                         <label>Your first name</label>
                         <input
                             type="text"
@@ -86,12 +87,10 @@ export default class ElixaSidebar extends Component {
                             onChange={e => this.handleChange(e)}
                             className="form-control"
                         />
-                    </form>
-                    <div className="form-group">
                         <button onClick={e => this.handleSubmit(e)} type="button">
                             Save
                         </button>
-                    </div>
+                    </form>
                 </div>
             </section>    
         )
