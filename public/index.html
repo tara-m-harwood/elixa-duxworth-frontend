@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
+      name="elixa.io | a friendly troubleshooting partner available 24/7"
       content="Web site created using create-react-app"
     />
     <link rel="icon" href="favicon.png">
@@ -33,7 +33,27 @@
     <div id=main-container>
 
         <section id="left-sidebar">
-          <img id="elixa-sidebar-icon" src="elixa_avatar.png" alt="friendly woman" />
+
+          <div id="left-sidebar-elixa-container">
+            <img id="left-sidebar-elixa-icon" src="elixa_avatar.png" alt="friendly woman" />
+          </div>
+
+          <div id="left-sidebar-button-container">
+            <button id="left-sidebar-button-save">save session</button>
+            <button id="left-sidebar-button-retrieve">retrieve session</button>
+          </div>
+
+        </section>
+
+        <section id="modal">
+          <div id="modal-content-container">
+            <button class="close">&times;</span>
+            <form id="modal-content-form-save" class="modal-form">
+              <input>name</input>
+              <input>phone</input>
+              <button>save conversation</button>
+            </form>
+          </div>
         </section>
 
         <div id="root"></div>
