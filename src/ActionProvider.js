@@ -1,7 +1,7 @@
 // ActionProvider starter code
 
-import pbBuildURL from "./pandorabotsProvider"
-import { pbSetSession } from "./pandorabotsProvider"
+import pbBuildURL from "./pandorabotsHelper"
+import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient } from "./pandorabotsHelper"
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
@@ -31,26 +31,23 @@ class ActionProvider {
     pbGetReply(message) {
         const options = { method: "POST"}
 
+        console.log(pbBuildURL(message))
+
         fetch(pbBuildURL(message),options)
             .then(data => data.json())
             .then(data => {
-
                 console.log(data)
 
                 pbSetSession(data.sessionid)
+                pbSetClient(data.client_name)
 
-                const responses = data.responses
-                responses.forEach(response => {
+                data.responses.forEach(response => {
                     
-                    if(response.substr(0,7)==="<image>") {
-
-                        const parser = new DOMParser()
-                        const xmlImageDoc = parser.parseFromString(response, "application/xml")
-                        const imageSource = xmlImageDoc.documentElement.textContent
+                    if(pbContainsImage(response)) {
 
                         this.setState((prevState) => ({
                             ...prevState,
-                            imageSource: imageSource
+                            imageSource: pbSetImageSource(response)
                         }));
 
                         const pbImageReply = this.createChatBotMessage("LOL!", {widget: "imageReply"})
