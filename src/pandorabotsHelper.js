@@ -43,8 +43,12 @@ export function pbSetImageSource(response){
 export function pbSaveClient(client){
     const baseURL = "http://localhost:3000/users"
     const fetchOptions = { "method": "POST",
-                            body: JSON.stringify({
-                                "name": "Amy"
+                            "headers": {
+                                "Content-Type": "application/json"
+                            },
+                            "body": JSON.stringify({
+                                "name": "Basil",
+                                "client_name": "dummy client"
                             })
                         }
     fetch(baseURL, fetchOptions)
