@@ -38,5 +38,16 @@ export function pbSetImageSource(response){
         const xmlImageDoc = parser.parseFromString(response, "application/xml")
         const imageSource = xmlImageDoc.documentElement.textContent
         return imageSource
-}    
-    
+}
+
+export function pbSaveClient(client){
+    const baseURL = "http://localhost:3000/users"
+    const fetchOptions = { "method": "POST",
+                            body: JSON.stringify({
+                                "name": "Amy"
+                            })
+                        }
+    fetch(baseURL, fetchOptions)
+        .then(response => response.json())
+        .then(console.log)
+}                        

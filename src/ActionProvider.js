@@ -1,7 +1,7 @@
 // ActionProvider starter code
 
 import pbBuildURL from "./pandorabotsHelper"
-import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient } from "./pandorabotsHelper"
+import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient, pbSaveClient } from "./pandorabotsHelper"
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
@@ -29,17 +29,19 @@ class ActionProvider {
     }
 
     pbGetReply(message) {
-        const options = { method: "POST"}
+        const fetchOptions = { method: "POST"}
 
         console.log(pbBuildURL(message))
 
-        fetch(pbBuildURL(message),options)
+        fetch(pbBuildURL(message),fetchOptions)
             .then(data => data.json())
             .then(data => {
                 console.log(data)
 
                 pbSetSession(data.sessionid)
                 pbSetClient(data.client_name)
+
+                pbSaveClient(data.client_name)
 
                 data.responses.forEach(response => {
                     
@@ -60,7 +62,8 @@ class ActionProvider {
                     
                 })
 
-            })  
+            })    
+            
     }
 
     updateChatbotState(message) {

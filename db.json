@@ -1,14 +1,22 @@
 {
   "users": [
-    { "id": 1, 
-      "name": "Tara",
-      "pin": "7512",
-      "saved": "none" 
+    {
+      "id": 1,
+      "user_name": "Tara",
+      "client_name": "uuiprod-unf6963c69-user-0020"
     },
-    { "id": 2, 
-      "name": "Jem",
-      "pin": "7512",
-      "saved": "none" 
+    {
+      "id": 2
+    },
+    {
+      "name": "Amy",
+      "client_name": "uuiprod-unf6963c69-user-0020",
+      "id": 3
+    },
+    {
+      "name": "Amy",
+      "client_name": "uuiprod-unf6963c69-user-0020",
+      "id": 4
     }
   ]
 }
