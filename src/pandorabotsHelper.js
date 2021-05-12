@@ -37,12 +37,12 @@ export function pbSetImageSource(response){
 }
 
 export function pbSaveClient(username, phone){
-    const baseURL = "http://localhost:9000/"
-    const fetchOptions = { "method": "POST",
-                            "headers": {
+    const baseURL = "http://localhost:9000/usersCollection"
+    const fetchOptions = {  method: "POST",
+                            headers: {
                                 "Content-Type": "application/json"
                             },
-                            "body": JSON.stringify({
+                            body: JSON.stringify({
                                 "user_name": username,
                                 "phone_number": phone,
                                 "client_name": currentClient,
@@ -53,16 +53,18 @@ export function pbSaveClient(username, phone){
         .then(console.log)
 }
 
-
 export function pbRetrieveClient(username, phone){
-    const baseURL = "http://localhost:9000"
-    fetch(baseURL)
+    console.log("get it")
+    const baseURL = "http://localhost:9000/usersCollection"
+    const fetchOptions = { headers: {"Content-Type": "application/json"}, }
+    fetch(baseURL, fetchOptions)
         .then(response => response.json())
         .then(users => users.forEach(user => {
             if(user.user_name===username){
                 var foundClient=user.client_name
                 currentClient=foundClient
             }
+            console.log(currentClient)
         }))   
 }
 
