@@ -1,15 +1,14 @@
 // ActionProvider starter code
+
+import pbBuildURL from "./pandorabotsHelper"
+import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient } from "./pandorabotsHelper"
+
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
         this.createChatBotMessage = createChatBotMessage;
         this.setState = setStateFunc;
         this.createClientMessage = createClientMessage;
     }
-
-    state = {
-        session: "test"
-    }
-
 
     handleStartTroubleshooter = () => {
         const clientMessage = this.createClientMessage("I need help with my code")
@@ -29,32 +28,26 @@ class ActionProvider {
         this.pbGetReply(clientMessage.message)
     }
 
-    // pbGetReply takes in a message from the MessageParser and retrieves a reply from Pandorabots API
-
     pbGetReply(message) {
+        const fetchOptions = { method: "POST"}
 
-        const baseURL = "https://api.pandorabots.com/talk/unf6963c69/elixa?user_key=bc3d30376b455afd667908e211239116&input="
-        const options = { method: 'POST' }
+        console.log(pbBuildURL(message))
 
-        fetch(`${baseURL}${message}`, options)
+        fetch(pbBuildURL(message),fetchOptions)
             .then(data => data.json())
             .then(data => {
-                const responses = data.responses
-                console.log(data.sessionid)
+                console.log(data)
 
-                const pbSession = data.sessionid
+                pbSetSession(data.sessionid)
+                pbSetClient(data.client_name)
 
-                responses.forEach(response => {
+                data.responses.forEach(response => {
                     
-                    if(response.substr(0,7)==="<image>") {
-
-                        const parser = new DOMParser()
-                        const xmlImageDoc = parser.parseFromString(response, "application/xml")
-                        const imageSource = xmlImageDoc.documentElement.textContent
+                    if(pbContainsImage(response)) {
 
                         this.setState((prevState) => ({
                             ...prevState,
-                            imageSource: imageSource
+                            imageSource: pbSetImageSource(response)
                         }));
 
                         const pbImageReply = this.createChatBotMessage("LOL!", {widget: "imageReply"})
@@ -67,7 +60,8 @@ class ActionProvider {
                     
                 })
 
-            })  
+            })    
+            
     }
 
     updateChatbotState(message) {

@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+div.App{
+  display: inline-flex;
+}
+
 div#main-container {
   display: inline-flex;
   background-color: #ED4AAE;
@@ -20,7 +24,7 @@ div#main-container {
 }
 
 section#left-sidebar{
-  width: 30vw;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -32,7 +36,7 @@ section#left-sidebar{
   }
 }
 
-img#elixa-sidebar-icon{
+img#left-sidebar-elixa-icon{
   width: 100%;
   background-color: #41BC3F;
   border-bottom-color: #fff;

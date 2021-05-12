@@ -10,6 +10,7 @@ const config = {
     botName: "Elixa Duxworth",
 
     initialMessages: [
+
         createChatBotMessage(
             "Hi, I'm here to help. How can I support you today?", 
             {widget: "initialChoices",}
@@ -17,7 +18,8 @@ const config = {
     ],
 
     state: {
-        sessionID: "",
+        pbSession: "6796820",
+        pbClientName: "test",
         imageSource: "https://elixa.io/assets/elixa.png",
     },
 

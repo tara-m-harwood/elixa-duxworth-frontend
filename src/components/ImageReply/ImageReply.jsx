@@ -21,7 +21,7 @@ export default class ImageReply extends Component {
       <div>
           return
           <div className="image-reply-container">
-            <img src={this.state.imageSource}></img>
+            <img src={this.state.imageSource} alt="unknown"></img>
           </div>;
       </div>
     )

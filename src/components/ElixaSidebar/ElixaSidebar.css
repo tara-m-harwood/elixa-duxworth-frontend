@@ -1,0 +1,75 @@
+
+#left-sidebar-button-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 15px;
+}
+
+#left-sidebar-button-container button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #41BC3F;
+  margin: 20px;
+  font-size: large;
+  font-weight: 700;
+  width: 70%;
+  margin: auto 0;
+}
+
+#tagline{
+  background-color: #fff;
+  border: 8px solid #41BC3F;
+}
+
+
+.show-modal{
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.hide-modal{
+  display:none;
+}
+
+/* Modal Content/Box */
+form.modal-form {
+  display: flex;
+  flex-direction: column;
+  background-color: hotpink;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 8px solid #41BC3F;
+  width: 50%;
+  height: 20%
+}
+
+button.closeModal{
+  justify-self: right;
+  text-justify: center;
+  margin-left: 95%;
+  width: 25px;
+  height: 25px;
+}
+
+.form-control {
+  font-size:large;
+  font-weight: 700;
+  margin: 15px;
+  width: 35%;
+}
+
+.form-label {
+  font-size:large;
+  font-weight: 700;
+}

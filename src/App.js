@@ -5,10 +5,10 @@ import "./App.css";
 import ActionProvider from "./ActionProvider";
 import MessageParser from "./MessageParser";
 import config from "./config";
+import ElixaSidebar from "./components/ElixaSidebar/ElixaSidebar";
 
   const saveMessages = (messages) => {
     localStorage.setItem("chat_messages", JSON.stringify(messages));
-    console.log("local storage",localStorage)
   };
 
   const loadMessages = () => {
@@ -19,6 +19,7 @@ import config from "./config";
 function App() {
   return (
     <div className="App">
+      <ElixaSidebar />
       <header className="App-header">
         <Chatbot
           config={config}
