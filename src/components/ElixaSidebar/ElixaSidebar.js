@@ -88,7 +88,14 @@ export default class ElixaSidebar extends Component {
                     <img id="left-sidebar-elixa-icon" src="elixa_avatar.png" alt="friendly woman" />
                 </div>
 
+                {/* <div id="tagline">
+                    <h1>Elixa Duxworth</h1>
+                    <h4>a friendly troubleshooting partner </h4>
+                    <h4>who is always available to listen</h4>
+                </div> */}
+
                 <div id="left-sidebar-button-container">
+
                     <button id="left-sidebar-button-save" onClick={e => this.modalSaveOpen()}>
                         save session
                     </button>

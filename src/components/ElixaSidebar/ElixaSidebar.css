@@ -1,7 +1,29 @@
 
-#test{
-    background-color: blue;
+#left-sidebar-button-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 15px;
 }
+
+#left-sidebar-button-container button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #41BC3F;
+  margin: 20px;
+  font-size: large;
+  font-weight: 700;
+  width: 70%;
+  margin: auto 0;
+}
+
+#tagline{
+  background-color: #fff;
+  border: 8px solid #41BC3F;
+}
+
 
 .show-modal{
   display: block; /* Hidden by default */
