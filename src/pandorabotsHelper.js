@@ -58,7 +58,12 @@ export function pbRetrieveClient(username, phone){
     const baseURL = "http://localhost:3000/users"
     fetch(baseURL)
         .then(response => response.json())
-        .then(console.log)
+        .then(users => users.forEach(user => {
+            if(user.user_name===username){
+                var foundClient=user.client_name
+                currentClient=foundClient
+            }
+        }))   
 }
 
 
