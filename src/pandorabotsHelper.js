@@ -37,7 +37,7 @@ export function pbSetImageSource(response){
 }
 
 export function pbSaveClient(username, phone){
-    const baseURL = "http://localhost:3000/users"
+    const baseURL = "http://localhost:9000/"
     const fetchOptions = { "method": "POST",
                             "headers": {
                                 "Content-Type": "application/json"
@@ -55,7 +55,7 @@ export function pbSaveClient(username, phone){
 
 
 export function pbRetrieveClient(username, phone){
-    const baseURL = "http://localhost:3000/users"
+    const baseURL = "http://localhost:9000"
     fetch(baseURL)
         .then(response => response.json())
         .then(users => users.forEach(user => {
