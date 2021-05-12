@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './ElixaSidebar.css'
-import { pbSaveClient, testIt } from '../../pandorabotsHelper'
+import { pbSaveClient, pbRetrieveClient } from '../../pandorabotsHelper'
 
 export default class ElixaSidebar extends Component {
     constructor(props) {
@@ -60,14 +60,18 @@ export default class ElixaSidebar extends Component {
         });
     }
 
-    handleSubmit(e) {
+    handleSaveSubmit(e) {
         this.setState({ name: this.state.modalSaveInputName });
         this.setState({ name: this.state.modalSaveInputPhone });
-        console.log(this.state.modalSaveInputName)
-        console.log(this.state.modalSaveInputPhone)
-        testIt(this.state.modalSaveInputName, this.state.modalSaveInputPhone)
         pbSaveClient(this.state.modalSaveInputName, this.state.modalSaveInputPhone)
         this.modalSaveClose();
+    }
+
+    handleRetrieveSubmit(e) {
+        this.setState({ name: this.state.modalRetrieveInputName });
+        this.setState({ name: this.state.modalRetrieveInputPhone });
+        pbRetrieveClient(this.state.modalRetrieveInputName, this.state.modalRetrieveInputPhone)
+        this.modalRetrieveClose();
     }
 
     testFunc(e){
@@ -102,7 +106,7 @@ export default class ElixaSidebar extends Component {
                             <input
                                 type="text"
                                 name="modalSaveInputName"
-                                value={this.state.modalInputName}
+                                value={this.state.modalSaveInputName}
                                 onChange={e => this.handleChange(e)}
                                 className="form-control"
                             />
@@ -112,14 +116,14 @@ export default class ElixaSidebar extends Component {
                             <input
                                 type="text"
                                 name="modalSaveInputPhone"
-                                value={this.state.modalInputPhone}
+                                value={this.state.modalSaveInputPhone}
                                 onChange={e => this.handleChange(e)}
                                 className="form-control"
                             />
                         </label>
                         <div id="save-session-container">
                             <button id="save-session" className="form-control" 
-                                    onClick={e => this.handleSubmit(e)} type="button">
+                                    onClick={e => this.handleSaveSubmit(e)} type="button">
                                 Save
                             </button>
                         </div>
@@ -144,14 +148,15 @@ export default class ElixaSidebar extends Component {
                             Your phone number
                             <input
                                 type="text"
-                                name="modalInputRetrievePhone"
+                                name="modalRetrieveInputPhone"
                                 value={this.state.modalRetrieveInputPhone}
                                 onChange={e => this.handleChange(e)}
                                 className="form-control"
                             />
                         </label>
                         <div id="retrieve-session-container">
-                            <button id="retrieve-session" className="form-control" onClick={e => this.handleSubmit(e)} type="button">
+                            <button id="retrieve-session" className="form-control" 
+                                    onClick={e => this.handleRetrieveSubmit(e)} type="button">
                                 Retrieve
                             </button>
                         </div>

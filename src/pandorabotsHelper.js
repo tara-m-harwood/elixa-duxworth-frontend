@@ -53,6 +53,16 @@ export function pbSaveClient(username, phone){
         .then(console.log)
 }
 
+
+export function pbRetrieveClient(username, phone){
+    const baseURL = "http://localhost:3000/users"
+    fetch(baseURL)
+        .then(response => response.json())
+        .then(console.log)
+}
+
+
+
 export function testIt(username, phone){
         console.log(username, phone)
     }
