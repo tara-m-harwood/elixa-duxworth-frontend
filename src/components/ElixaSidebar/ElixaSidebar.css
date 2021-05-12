@@ -29,5 +29,25 @@ form#save-modal-form {
   padding: 20px;
   border: 8px solid #41BC3F;
   width: 50%;
-  height: 50%
+  height: 20%
+}
+
+button#closeModalSave{
+  justify-self: right;
+  text-justify: center;
+  margin-left: 95%;
+  width: 25px;
+  height: 25px;
+}
+
+.form-control {
+  font-size:large;
+  font-weight: 700;
+  margin: 15px;
+  width: 35%;
+}
+
+.form-label {
+  font-size:large;
+  font-weight: 700;
 }

@@ -70,26 +70,32 @@ export default class ElixaSidebar extends Component {
 
                 <div id="#modal-content-container" className={this.getModalClass()}>
                     <form id="save-modal-form">
-                        <button className="closeModalTimes" onClick={e => this.modalClose(e)}>&times;</button>
-                        <label>Your first name</label>
-                        <input
-                            type="text"
-                            name="modalInputName"
-                            value={this.state.modalInputName}
-                            onChange={e => this.handleChange(e)}
-                            className="form-control"
-                        />
-                        <label>Phone number</label>
-                        <input
-                            type="text"
-                            name="modalInputPhone"
-                            value={this.state.modalInputPhone}
-                            onChange={e => this.handleChange(e)}
-                            className="form-control"
-                        />
-                        <button onClick={e => this.handleSubmit(e)} type="button">
-                            Save
-                        </button>
+                        <button id="closeModalSave" onClick={e => this.modalClose(e)} type="button">X</button>
+                        <label className="form-label">
+                            Your first name:
+                            <input
+                                type="text"
+                                name="modalInputName"
+                                value={this.state.modalInputName}
+                                onChange={e => this.handleChange(e)}
+                                className="form-control"
+                            />
+                        </label>
+                        <label className="form-label">
+                            Your phone number
+                            <input
+                                type="text"
+                                name="modalInputPhone"
+                                value={this.state.modalInputPhone}
+                                onChange={e => this.handleChange(e)}
+                                className="form-control"
+                            />
+                        </label>
+                        <div id="save-session-container">
+                            <button id="save-session" className="form-control" onClick={e => this.handleSubmit(e)} type="button">
+                                Save
+                            </button>
+                        </div>
                     </form>
                 </div>
             </section>    
