@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './ElixaSidebar.css'
+import { pbSaveClient, testIt } from '../../pandorabotsHelper'
 
 export default class ElixaSidebar extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            showModal: true,
+            showModal: false,
             modalInputName: "",
             modalInputPhone: "",
         };
@@ -44,6 +45,8 @@ export default class ElixaSidebar extends Component {
         this.setState({ name: this.state.modalInputPhone });
         console.log(this.state.modalInputName)
         console.log(this.state.modalInputPhone)
+        testIt(this.state.modalInputName, this.state.modalInputPhone)
+        pbSaveClient(this.state.modalInputName, this.state.modalInputPhone)
         this.modalClose();
     }
 

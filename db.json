@@ -3,94 +3,14 @@
     {
       "id": 1,
       "user_name": "Tara",
+      "phone_number": "5107252979",
       "client_name": "uuiprod-unf6963c69-user-0020"
     },
     {
+      "user_name": "Clara",
+      "phone_number": "5558675309",
+      "client_name": "uuiprod-unf6963c69-user-0030",
       "id": 2
-    },
-    {
-      "name": "Amy",
-      "client_name": "uuiprod-unf6963c69-user-0020",
-      "id": 3
-    },
-    {
-      "name": "Amy",
-      "client_name": "uuiprod-unf6963c69-user-0020",
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 8
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 9
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 10
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 11
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 12
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 13
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 14
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 15
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 16
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 17
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 18
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 19
-    },
-    {
-      "name": "Basil",
-      "client_name": "dummy client",
-      "id": 20
     }
   ]
 }

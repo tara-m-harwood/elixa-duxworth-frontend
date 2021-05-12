@@ -41,8 +41,6 @@ class ActionProvider {
                 pbSetSession(data.sessionid)
                 pbSetClient(data.client_name)
 
-                pbSaveClient(data.client_name)
-
                 data.responses.forEach(response => {
                     
                     if(pbContainsImage(response)) {

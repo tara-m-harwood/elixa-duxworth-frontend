@@ -7,13 +7,9 @@ var currentSession = "";
 var currentClient = "";
 
 export default function pbBuildURL(message){
-
     const api_type = (currentClient==="") ? "atalk" : "talk";
-
     const baseURL = `${api_root}/${api_type}/${app_id}/${botname}?user_key=${user_key}&input=${message}`
-
     const params = `&sessionid=${currentSession}&client_name=${currentClient}&extra=${extra}`
-
     return (api_type==="atalk") ? baseURL : `${baseURL}${params}`
 }
 
@@ -40,15 +36,16 @@ export function pbSetImageSource(response){
         return imageSource
 }
 
-export function pbSaveClient(client){
+export function pbSaveClient(username, phone){
     const baseURL = "http://localhost:3000/users"
     const fetchOptions = { "method": "POST",
                             "headers": {
                                 "Content-Type": "application/json"
                             },
                             "body": JSON.stringify({
-                                "name": "Basil",
-                                "client_name": "dummy client"
+                                "user_name": username,
+                                "phone_number": phone,
+                                "client_name": currentClient,
                             })
                         }
     fetch(baseURL, fetchOptions)
