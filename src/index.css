@@ -24,7 +24,7 @@ div#main-container {
 }
 
 section#left-sidebar{
-  width: 30vw;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
