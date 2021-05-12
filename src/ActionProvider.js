@@ -1,7 +1,7 @@
 // ActionProvider starter code
 
 import pbBuildURL from "./pandorabotsHelper"
-import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient, pbSaveClient } from "./pandorabotsHelper"
+import { pbSetSession, pbContainsImage, pbSetImageSource, pbSetClient } from "./pandorabotsHelper"
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {

@@ -21,7 +21,7 @@
 }
 
 /* Modal Content/Box */
-form#save-modal-form {
+form.modal-form {
   display: flex;
   flex-direction: column;
   background-color: hotpink;
@@ -32,7 +32,7 @@ form#save-modal-form {
   height: 20%
 }
 
-button#closeModalSave{
+button.closeModal{
   justify-self: right;
   text-justify: center;
   margin-left: 95%;

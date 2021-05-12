@@ -37,7 +37,7 @@ export default class ElixaSidebar extends Component {
         this.setState({ showModalSave: true });
     }
 
-    modalSaveRetrieve() {
+    modalRetrieveOpen() {
         console.log("open sesame retrieve")
         this.setState({ showModalRetrieve: true });
     }
@@ -88,13 +88,15 @@ export default class ElixaSidebar extends Component {
                     <button id="left-sidebar-button-save" onClick={e => this.modalSaveOpen()}>
                         save session
                     </button>
-                    <button id="left-sidebar-button-retrieve">retrieve session</button>
+                    <button id="left-sidebar-button-retrieve" onClick={e => this.modalRetrieveOpen()}>
+                        retrieve session
+                    </button>
                 </div>
 
                 {/* SAVE MODAL */}
                 <div id="#modal-save-container" className={this.getModalSaveClass()}>
-                    <form id="save-modal-form">
-                        <button id="closeModalSave" onClick={e => this.modalSaveClose()} type="button">X</button>
+                    <form className="modal-form">
+                        <button className="closeModal" onClick={e => this.modalSaveClose()} type="button">X</button>
                         <label className="form-label">
                             Your first name:
                             <input
@@ -126,8 +128,8 @@ export default class ElixaSidebar extends Component {
 
                 {/* RETRIEVE MODAL */}
                 <div id="#modal-retrieve-container" className={this.getModalRetrieveClass()}>
-                    <form id="retrieve-modal-form">
-                        <button id="closeModalRetrieve" onClick={e => this.modalRetrieveClose(e)} type="button">X</button>
+                    <form className="modal-form">
+                        <button className="closeModal" onClick={e => this.modalRetrieveClose(e)} type="button">X</button>
                         <label className="form-label">
                             Your first name:
                             <input
