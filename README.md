@@ -30,14 +30,15 @@ The Elixa Newpal code is based on a 2005 [ELIZA Javascript implementation](https
 
 ## Chat at the Next Level
 
-Elixa Duxworth also has a passion for helping codes with their code, but her technology stacks is quite different than Elixa Newpal.  While Elixa Newpal was an experience in vintage computing, Elixa Duxworth is built on the modern AI chatbot engine Pandorabots, programmed with AIML (Artificial Intelligence Markup Languag).
+Elixa Duxworth also has a passion for helping codes with their code, but her technology stacks is quite different than Elixa Newpal.  While Elixa Newpal was an experience in vintage computing, Elixa Duxworth is built on the modern AI chatbot engine Pandorabots, programmed with AIML (Artificial Intelligence Markup Language). Her interface has been upgraded using React and the [react-chatbot-kit](https://fredrikoseberg.github.io/react-chatbot-kit-docs/).
 
 ## Technologies
 
-**Frontend**
+**Chatbot API**
 * Hosted API on Pandorabots
 * Base personality forked from Rosiebot
 * Conversations programmed using AIML (Artificial Intellegence Markup Language)
+* Bot repo: https://github.com/tara-m-harwood/elixa-duxworth-bot
 
 **Frontend**
 * Implemented in React
