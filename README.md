@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+![pink chat icon with a green status indicator and a green smile. Text below reads 'elixa.io, have a nice chat'](assets/elixa_small.png) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+* [Meet Elixa](#meet-elixa)
+* [Inspiration](#inspiration)
+* [Conversations](#conversations)
+* [Technologies](#technologies)
+* [Status](#status)
+* [Contact](#contact)
+* [License](#license)
 
-## Available Scripts
+## Meet Elixa
+[Elixa Newpal](http://www.elixa.io/) is a beginning software engineering student with a passion for helping her fellow bootcampers debug their code.  While she doesn't have much hands-on technical experience, she has picked up some programming tips, especially when it comes to common rookie mistakes in Ruby, Rails or Javascript.  Even when her suggestions are not exactly on point, sometimes just chatting through troubleshooting woes can help.  Elixa figures she as least as good of a troubleshooting partner as a [rubber duck](https://rubberduckdebugging.com/).  And when a bug has you really stuck, what have you got to lose?
 
-In the project directory, you can run:
+Elixa's friendly attitude, familiar Slack-like interface, and constant availability makes her an appealing option for anyone who needs to chat through a thorny coding problem.  Her technical tips are based on the learning experiences of many software bootcamp students and instructors. Elixa's advice includes targeted responses at the mention of specific technologies, as well as general programming wisdom.  And if the conversation strays off the topic of programming, she may slip into interactions based on her previous career as a psychotherapist!
 
-### `yarn start`
+## Historic Inspiration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Elixa Newpal is based on ELIZA, an early natural language processing computer program developed in 1966 by Joseph Weizenbaum of the MIT Artificial Intelligence Lab. ELIZA simulated conversation by using a pattern matching and substitution methodology that gave users an illusion of understanding on the part of the program. Interactions were dictated by "scripts" which allowed ELIZA to process user inputs and engage in discourse following the rules and directions of the script. The most famous script, DOCTOR, simulated a psychotherapist by using script rules to respond with non-directional questions to user inputs. ELIZA was one of the first ever chatbots and one of the first programs capable of attempting the Turing test.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ELIZA was originally written in the MAD-SLIP programming language, which Weizenbaum invented as a an extension to FORTRAN.  In 1977, a BASIC version appeared in Creative Computing magazine, which was ported to many of the earliest personal computers of the late 70s and early 80s. ELIZA continues to be source of inspiration for programmers and developers focused on artificial intelligence.  For example, Amazon's Alexa includes an [ELIZA implementation](https://www.amazon.com/Asimov-Eliza/dp/B0184NR4P8) as does [Google Home](https://www.makeuseof.com/tag/google-home-commands-cheat-sheet/).  Another version of Eliza popular among software engineers is the version that comes with the default release of GNU Emacs, and which can be accessed by typing `M-x doctor` from most modern Emacs implementations.
 
-### `yarn test`
+The Elixa Newpal code is based on a 2005 [ELIZA Javascript implementation](https://www.masswerk.at/elizabot/) by [Norbert Landsteiner of mass:werk media](https://www.masswerk.at/). While being a mere 15 years old as opposed to 55, this ELIZA uses a web interface that is styled similar to a teletype in order to mimic the original 1966 version. Elixa uses the same chatbot engine code as the Landsteiner implementation, but with an updated interface to provide a slack-like experience, and with a new script that reimagines her as a beginning SE bootcamp student rather than a Rogerian therapist.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*note: historic information liberally paraphrased from [Wikipedia's ELIZA article](https://en.wikipedia.org/wiki/ELIZA)*
 
-### `yarn build`
+## Modern Inspiration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Elixa Newpal was developed as an appreciative gift to the incredible learning community of the Flatiron Software Engineering Bootcamp in Denver, CO, affectionately known as "The Love Bubble" or "The Learning Factory".  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Frontend**
+* Implemented in Javascript
+* Deployed with [Netlify](https://netlify.app/)
+* Frontend repo: https://github.com/tara-m-harwood/elixa-newpal-fe
 
-### `yarn eject`
+**Backend**
+* Node.js and Express
+* Deployed with [Heroku](https://heroku.com)
+* Backend repo: https://github.com/tara-m-harwood/elixa-newpal-node
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Status and Future Plans
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2021-04-02: Elixa Newpal was launched as an MVP and presented to the Denver Love Bubble community.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Future features under consideration:
+* Creation of a new general-purpose Elixa script for troublshooting support, broadening beyond one specific school
+* Improvment of the keyword memory feature so that Elixa will "remember" specific technologies mentioned earlier in the conversation and be able to persist some context
+* Addition of an autosearch feature where Elixa will present the user with Google searches based on combinations of keywords
+* An SMS interface
+* An official Slackbot integration
+* A significant refactor of the code
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contact
 
-## Learn More
+Hi! My name is Tara Harwood, and I am the developer of Elixa Newpal and the Founder/ Chief Hobbyist of [elixa.io](https://elixa.io/), which is my brand for volunteer contributions to open-source projects and chatbot research activities.  I have a specific interest in natural language processing, SMS applications, and technologies related to political activism.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As a child, my first personal computer came with the BASIC version of ELIZA, and from the start I was entranced with her.  My early positive experiences with ELIZA formed my interest in computer programming and influenced my ideas about interaction design.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+As of April 2021, I am a student at Flatiron School's Full-Stack Software Engineering Bootcamp in Denver, CO. I created Elixa Newpal as my Week 9 project, as part of my 15 week curriculum. I will be graduating in May 2021. You can learn more about / contact me on LinkedIn or GitHub:
 
-### Code Splitting
+* [Tara on LinkedIn](https://www.linkedin.com/in/taraharwood/)
+* [Tara on GitHub](https://github.com/tara-m-harwood)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+"Elixa Newpal" and "elixa.io" are copyrights of Tara Harwood, 2021, all rights reserved.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All of the code in this project is free software and can be used for any purpose.  Attribution is appreciated, but not required.
