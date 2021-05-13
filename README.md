@@ -12,11 +12,11 @@
 ## Meet Elixa
 [Elixa Duxworth](http://www.elixa.io/) is a friendly troubleshooting partner who is always available to listen.  While she doesn't have much hands-on technical experience, she has picked up some programming tips, especially when it comes to common rookie mistakes in Javascript, HTML, and CSS. Even when her suggestions are not exactly on point, sometimes just chatting through troubleshooting woes can help.  Elixa figures she as least as good of a troubleshooting partner as a [rubber duck](https://rubberduckdebugging.com/).  And when a bug has you really stuck, what have you got to lose?
 
-Elixa's friendly attitude, familiar chatbot interface, and constant availability makes her an appealing option for anyone who needs to chat through a thorny coding problem. Elixa's advice includes targeted responses at the mention of specific technologies, as well as general programming wisdom.  And if you need a break from coding, she is always happy to make small talk, play games, and even sing a song!
+Elixa's friendly attitude, familiar chatbot interface, and constant availability makes her an appealing option for anyone who needs to chat through a thorny coding problem. Elixa's advice includes targeted responses at the mention of specific technologies, as well as general programming wisdom.  And if you need a break from coding, she is always happy to make small talk, play games, or even sing a song!
 
 ## Historic Inspiration
 
-Elixa.io takes inspiration from ELIZA, an early natural language processing computer program developed in 1966 by Joseph Weizenbaum of the MIT Artificial Intelligence Lab. ELIZA simulated conversation by using a pattern matching and substitution methodology that gave users an illusion of understanding on the part of the program. Interactions were dictated by "scripts" which allowed ELIZA to process user inputs and engage in discourse following the rules and directions of the script. The most famous script, DOCTOR, simulated a psychotherapist by using script rules to respond with non-directional questions to user inputs. ELIZA was one of the first ever chatbots and one of the first programs capable of attempting the Turing test.
+All of the **elixa.io** chatbots take their inspiration from ELIZA, an early natural language processing computer program developed in 1966 by Joseph Weizenbaum of the MIT Artificial Intelligence Lab. ELIZA simulated conversation by using a pattern matching and substitution methodology that gave users an illusion of understanding on the part of the program. Interactions were dictated by "scripts" which allowed ELIZA to process user inputs and engage in discourse following the rules and directions of the script. The most famous script, DOCTOR, simulated a psychotherapist by using script rules to respond with non-directional questions to user inputs. ELIZA was one of the first ever chatbots and one of the first programs capable of attempting the Turing test.
 
 ELIZA was originally written in the MAD-SLIP programming language, which Weizenbaum invented as a an extension to FORTRAN.  In 1977, a BASIC version appeared in Creative Computing magazine, which was ported to many of the earliest personal computers of the late 70s and early 80s. ELIZA continues to be source of inspiration for programmers and developers focused on artificial intelligence.  For example, Amazon's Alexa includes an [ELIZA implementation](https://www.amazon.com/Asimov-Eliza/dp/B0184NR4P8) as does [Google Home](https://www.makeuseof.com/tag/google-home-commands-cheat-sheet/).  Another version of Eliza popular among software engineers is the version that comes with the default release of GNU Emacs, and which can be accessed by typing `M-x doctor` from most modern Emacs implementations.
 
@@ -24,11 +24,13 @@ ELIZA was originally written in the MAD-SLIP programming language, which Weizenb
 
 ## Early Iteration
 
-Elixa.io released its first chatbot, [Elixa Newpal](https://elixa.io/denver-love)
+**elixa.io** released its first chatbot, [Elixa Newpal](https://elixa.io/denver-love), in March 2021.  Elixa Newpal was designed to simulate a beginning software engineering bootcamp student with a passion for helping her fellow bootcampers debug their code.  Elixa Newpal was developed as an appreciative gift to the incredible learning community of the Flatiron Software Engineering Bootcamp in Denver, CO, affectionately known as "The Love Bubble" or "The Learning Factory".
 
 The Elixa Newpal code is based on a 2005 [ELIZA Javascript implementation](https://www.masswerk.at/elizabot/) by [Norbert Landsteiner of mass:werk media](https://www.masswerk.at/). While being a mere 15 years old as opposed to 55, this ELIZA uses a web interface that is styled similar to a teletype in order to mimic the original 1966 version. Elixa uses the same chatbot engine code as the Landsteiner implementation, but with an updated interface to provide a slack-like experience, and with a new script that reimagines her as a beginning SE bootcamp student rather than a Rogerian therapist.
 
-Elixa Newpal was developed as an appreciative gift to the incredible learning community of the Flatiron Software Engineering Bootcamp in Denver, CO, affectionately known as "The Love Bubble" or "The Learning Factory".  
+## Chat at the Next Level
+
+Elixa Duxworth also has a passion for helping codes with their code, but her technology stacks is quite different than Elixa Newpal.  While Elixa Newpal was an experience in vintage computing, Elixa Duxworth is built on the modern AI chatbot engine Pandorabots, programmed with AIML (Artificial Intelligence Markup Languag).
 
 ## Technologies
 
