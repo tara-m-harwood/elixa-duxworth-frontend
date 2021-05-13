@@ -35,6 +35,11 @@ Elixa Duxworth also has a passion for helping codes with their code, but her tec
 ## Technologies
 
 **Frontend**
+* Hosted API on Pandorabots
+* Base personality forked from Rosiebot
+* Conversations programmed using AIML (Artificial Intellegence Markup Language)
+
+**Frontend**
 * Implemented in React
 * Utilizes [react-chatbot-kit](https://fredrikoseberg.github.io/react-chatbot-kit-docs/)
 * Frontend repo: https://github.com/tara-m-harwood/elixa-duxworth-frontend
