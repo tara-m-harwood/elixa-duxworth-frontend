@@ -35,22 +35,20 @@ Elixa Duxworth also has a passion for helping codes with their code, but her tec
 ## Technologies
 
 **Frontend**
-* Implemented in Javascript
-* Deployed with [Netlify](https://netlify.app/)
-* Frontend repo: https://github.com/tara-m-harwood/elixa-newpal-fe
+* Implemented in React
+* Utilizes [react-chatbot-kit](https://fredrikoseberg.github.io/react-chatbot-kit-docs/)
+* Frontend repo: https://github.com/tara-m-harwood/elixa-duxworth-frontend
 
 **Backend**
-* Node.js and Express
-* Deployed with [Heroku](https://heroku.com)
-* Backend repo: https://github.com/tara-m-harwood/elixa-newpal-node
+* Node.js & Express Server
+* MongoDB for saving and retriving user accounts
+* Backend repo: https://github.com/tara-m-harwood/elixa-duxworth-backend
 
 ## Status and Future Plans
 
-2021-04-02: Elixa Newpal was launched as an MVP and presented to the Denver Love Bubble community.
-
 Future features under consideration:
 * Creation of a new general-purpose Elixa script for troublshooting support, broadening beyond one specific school
-* Improvment of the keyword memory feature so that Elixa will "remember" specific technologies mentioned earlier in the conversation and be able to persist some context
+* Improvment of the keyword memory feature so that Elixa will "remember" specific technologies mentioned earlier in the conversation and bring them up again
 * Addition of an autosearch feature where Elixa will present the user with Google searches based on combinations of keywords
 * An SMS interface
 * An official Slackbot integration
@@ -58,11 +56,11 @@ Future features under consideration:
 
 ## Contact
 
-Hi! My name is Tara Harwood, and I am the developer of Elixa Newpal and the Founder/ Chief Hobbyist of [elixa.io](https://elixa.io/), which is my brand for volunteer contributions to open-source projects and chatbot research activities.  I have a specific interest in natural language processing, SMS applications, and technologies related to political activism.
+Hi! My name is Tara Harwood, and I am the developer of Elixa Duxwoth, Elixa Newpal and the Founder/ Chief Hobbyist of [elixa.io](https://elixa.io/), which is my brand for volunteer contributions to open-source projects and chatbot research activities.  I have a specific interest in natural language processing, SMS applications, and technologies related to political activism.
 
 As a child, my first personal computer came with the BASIC version of ELIZA, and from the start I was entranced with her.  My early positive experiences with ELIZA formed my interest in computer programming and influenced my ideas about interaction design.
 
-As of April 2021, I am a student at Flatiron School's Full-Stack Software Engineering Bootcamp in Denver, CO. I created Elixa Newpal as my Week 9 project, as part of my 15 week curriculum. I will be graduating in May 2021. You can learn more about / contact me on LinkedIn or GitHub:
+In May 2021, I graduated from Flatiron School's Full-Stack Software Engineering Bootcamp in Denver, CO. I created Elixa Newpal as my Week 9 project, and Elixa Duxworth as my Capstone Project of th1 15 week curriculum. You can learn more about / contact me on LinkedIn or GitHub:
 
 * [Tara on LinkedIn](https://www.linkedin.com/in/taraharwood/)
 * [Tara on GitHub](https://github.com/tara-m-harwood)
@@ -70,6 +68,6 @@ As of April 2021, I am a student at Flatiron School's Full-Stack Software Engine
 
 ## License
 
-"Elixa Newpal" and "elixa.io" are copyrights of Tara Harwood, 2021, all rights reserved.
+"Elixa Duxworth", "Elixa Newpal" and "elixa.io" are copyrights of Tara Harwood, 2021, all rights reserved.
 
 All of the code in this project is free software and can be used for any purpose.  Attribution is appreciated, but not required.
